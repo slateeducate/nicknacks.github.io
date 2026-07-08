@@ -72,3 +72,28 @@ footer {
   color: white;
 }
 
+.collection {
+  text-align: center;
+  padding: 50px 20px;
+  background: #fff0d6;
+}
+
+.collection h2 {
+  font-size: 32px;
+}
+
+.molecule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+.molecule-grid div {
+  background: white;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  font-weight: bold;
+}
