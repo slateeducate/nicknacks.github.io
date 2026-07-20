@@ -11,6 +11,10 @@ header {
   padding: 40px 20px;
 }
 
+h1{
+  color:blue;
+}
+
 header h1 {
   font-size: 48px;
   color:#1f6feb;
@@ -34,6 +38,7 @@ background:black;
 }
 
 .hero {
+  color:green;
   text-align: center;
   padding: 60px 20px;
 }
@@ -109,4 +114,8 @@ footer {
   border-radius: 14px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.08);
   font-weight: bold;
+}
+
+#title{
+  color:red;
 }
