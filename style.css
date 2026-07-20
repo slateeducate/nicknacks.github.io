@@ -21,6 +21,18 @@ header p {
   font-size: 18px
 }
 
+.buy-button{
+
+background:green;
+
+}
+
+#main-header{
+
+background:black;
+
+}
+
 .hero {
   text-align: center;
   padding: 60px 20px;
