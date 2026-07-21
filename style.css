@@ -14,6 +14,10 @@
     0 0 40px #003bff;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Orbitron, sans-serif;
@@ -63,6 +67,50 @@ background:black;
   font-size: 18px;
 }
 
+.starter-pack {
+    padding: 40px 20px 60px;
+}
+
+.starter-banner {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  padding: 28px;
+  text-align: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #162b5c,
+      #0d1321
+    );
+
+  border: 2px solid #00e1ff;
+  border-radius: 18px;
+
+  box-shadow:
+    0 0 12px rgba(0, 225, 255, 0.35),
+    0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.starter-banner h2 {
+  margin: 8px 0 12px;
+  color: #ffffff;
+}
+
+.starter-banner p {
+  color: #c9e8ff;
+  line-height: 1.5;
+}
+
+.starter-label {
+  margin: 0;
+  color: #f46312;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 13px;
+}
+
 button {
   background: #3fa66b;
   color: white;
@@ -80,35 +128,57 @@ button:hover {
 .cards {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  padding: 40px 20px;
+  align-items: stretch;
+  gap: 16px;
+  padding: 0px;
   flex-wrap: wrap;
 }
 
 .card {
   background: #f46312;
-  width: 250px;
-  padding: 24px;
+  width: 145px;
+  min-height: 135px;
+  padding: 16px;
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
   text-align: center;
 }
 
-footer {
-  text-align center;
-  padding: 20px;
-  background: 2b2b2b;
-  color: white;
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 1.4;
 }
 
 .collection {
   text-align: center;
   padding: 50px 20px;
-  background: #fff0d6;
+
+  background:
+    radial-gradient(
+      circle at top,
+      #162b5c 0%,
+      #0d1321 60%,
+      #070b14 100%
+    );
+
+  border-top: 1px solid rgba(0, 225, 255, 0.35);
 }
 
 .collection h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
   font-size: 32px;
+  color: #ffffff;
+}
+
+.collection > p {
+  color: #c9e8ff;
 }
 
 .molecule-grid {
@@ -120,9 +190,39 @@ footer {
 }
 
 .molecule-grid div {
-  background: white;
+  background: #162b5c;
+  color: #ffffff;
+
   padding: 18px;
+  border: 1px solid rgba(0, 225, 255, 0.65);
   border-radius: 14px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.3),
+    0 0 8px rgba(0, 225, 255, 0.12);
+
   font-weight: bold;
+}
+
+.molecule-grid div {
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.molecule-grid div:hover {
+  transform: translateY(-4px);
+  border-color: #f46312;
+
+  box-shadow:
+    0 8px 18px rgba(0, 0, 0, 0.4),
+    0 0 12px rgba(244, 99, 18, 0.3);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #2b2b2b;
+  color: white;
 }
