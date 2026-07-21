@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap');
+
+.space-text {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 800;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+
+  text-shadow:
+    0 0 5px #00e1ff,
+    0 0 10px #00e1ff,
+    0 0 20px #003bff,
+    0 0 40px #003bff;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -6,7 +22,7 @@ body {
 }
 
 header {
-  background: #f5b84b
+  background: #f5b84b;
   text-align: center;
   padding: 40px 20px;
 }
@@ -22,7 +38,7 @@ header h1 {
 }
 
 header p {
-  font-size: 18px
+  font-size: 18px;
 }
 
 .buy-button{
@@ -50,7 +66,7 @@ background:black;
 .hero p {
   max-width: 600px;
   margin: 20px auto;
-  font-size: 18 px;
+  font-size: 18px;
 }
 
 button {
@@ -73,6 +89,7 @@ button:hover {
   gap: 20px;
   padding: 40px 20px;
   flex-wrap: wrap;
+}
 
 .card {
   background: #f46312;
