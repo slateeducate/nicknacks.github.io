@@ -42,7 +42,7 @@ header p {
 .buy-button{
 
 background:green;
-
+justify-content: center;
 }
 
 #main-header{
