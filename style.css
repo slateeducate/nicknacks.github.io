@@ -136,8 +136,7 @@ button:hover {
 
 .card {
   background: #f46312;
-  position: relatibe;
-  
+  position: relative;
   width: 145px;
   min-height: 135px;
   padding: 16px;
