@@ -193,6 +193,8 @@ button:hover {
   color: #c9e8ff;
 }
 
+@media (max width 768px){
+  
 .molecule-grid {
   display: grid;
   grid-template-columns: repeat(3,1fr);
@@ -200,7 +202,7 @@ button:hover {
   max-width: 900px;
   margin: 30px auto;
 }
-
+}
 .molecule-grid div {
   background: #162b5c;
   color: #ffffff;
