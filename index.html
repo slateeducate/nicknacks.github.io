@@ -36,15 +36,15 @@ Buy
   </section>
 
   <section class="starter-pack">
-    <article class="starter-banner"
+    <article class="starter-banner">
       <p class="starter-label">Featured Pack</p>
       <h2>Nick Nacks Starter Pack</h2>
       <p>
         Begin your collection by looking for three molecules connected to energy, motivation, and life.
       </p>
-    </article>p>
+    </article>
   
-    <div class=cards>  
+    <div class="cards">  
     <div class="card">
        <div class="badge">
         NEW
@@ -114,6 +114,155 @@ Buy
   selectedMolecule = "ATP";
 
   console.log(selectedMolecule);
+</script>
+  
+  <script>
+  const molecules = [
+    {
+      name: "Carbon",
+      category: "Element"
+    },
+    {
+      name: "Hydrogen",
+      category: "Element"
+    },
+    {
+      name: "Oxygen",
+      category: "Element"
+    },
+    {
+      name: "Nitrogen",
+      category: "Element"
+    },
+    {
+      name: "Water",
+      category: "Compound"
+    },
+    {
+      name: "Carbon Dioxide",
+      category: "Compound"
+    },
+    {
+      name: "Methane",
+      category: "Compound"
+    },
+    {
+      name: "Glucose",
+      category: "Carbohydrate"
+    },
+    {
+      name: "ATP",
+      category: "Energy"
+    },
+    {
+      name: "Benzene",
+      category: "Organic Compound"
+    },
+    {
+      name: "Dopamine",
+      category: "Neurotransmitter"
+    },
+    {
+      name: "Serotonin",
+      category: "Neurotransmitter"
+    }
+  ];
+
+  const searchInput =
+    document.getElementById("molecule-search");
+
+  const moleculeGrid =
+    document.getElementById("molecule-grid");
+
+  const searchStatus =
+    document.getElementById("search-status");
+
+  function renderMolecules(moleculesToDisplay) {
+    moleculeGrid.textContent = "";
+
+    if (moleculesToDisplay.length === 0) {
+      searchStatus.textContent =
+        "No matching molecules found.";
+
+      return;
+    }
+
+    for (
+      let i = 0;
+      i < moleculesToDisplay.length;
+      i++
+    ) {
+      const molecule =
+        moleculesToDisplay[i];
+
+      const moleculeTile =
+        document.createElement("div");
+
+      moleculeTile.textContent =
+        molecule.name;
+
+      moleculeTile.title =
+        molecule.category;
+
+      moleculeGrid.appendChild(
+        moleculeTile
+      );
+    }
+
+    searchStatus.textContent =
+      moleculesToDisplay.length +
+      " molecule(s) shown.";
+  }
+
+  function searchMolecules() {
+    const searchTerm =
+      searchInput.value
+        .trim()
+        .toLowerCase();
+
+    const matchingMolecules = [];
+
+    for (
+      let i = 0;
+      i < molecules.length;
+      i++
+    ) {
+      const molecule =
+        molecules[i];
+
+      const moleculeName =
+        molecule.name.toLowerCase();
+
+      const moleculeCategory =
+        molecule.category.toLowerCase();
+
+      const nameMatches =
+        moleculeName.includes(searchTerm);
+
+      const categoryMatches =
+        moleculeCategory.includes(searchTerm);
+
+      if (
+        nameMatches ||
+        categoryMatches
+      ) {
+        matchingMolecules.push(
+          molecule
+        );
+      }
+    }
+
+    renderMolecules(
+      matchingMolecules
+    );
+  }
+
+  searchInput.addEventListener(
+    "input",
+    searchMolecules
+  );
+
+  renderMolecules(molecules);
 </script>
   
 </body>
