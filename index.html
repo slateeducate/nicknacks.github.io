@@ -67,22 +67,30 @@ Buy
 
 <section class="collection">
   <h2>Molecule Collection</h2>
-  <p>Start with the core Nick Nacks 12.</p>
 
-  <div class="molecule-grid">
-    <div>Carbon</div>
-    <div>Hydrogen</div>
-    <div>Oxygen</div>
-    <div>Nitrogen</div>
-    <div>Water</div>
-    <div>Carbon Dioxide</div>
-    <div>Methane</div>
-    <div>Glucose</div>
-    <div>ATP</div>
-    <div>Benzene</div>
-    <div>Dopamine</div>
-    <div>Serotonin</div>
-  </div>
+  <p>Search the core Nick Nacks 12.</p>
+
+  <label for="molecule-search" class="search-label">
+    Search Molecules
+  </label>
+
+  <input
+    id="molecule-search"
+    class="molecule-search"
+    type="search"
+    placeholder="Try glucose, dopamine, or ATP."
+  >
+
+  <p
+    id="search-status"
+    class="search-status"
+    aria-live="polite"
+  ></p>
+
+  <div
+    id="molecule-grid"
+    class="molecule-grid"
+  ></div>
 </section>
   
   <footer>
